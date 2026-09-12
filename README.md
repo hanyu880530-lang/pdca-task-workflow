@@ -1,7 +1,7 @@
 # PDCA Task Workflow · PDCA 铁律工作流
 
 > **让 AI agent 先计划再动手、用真实结果验证、收尾四阶段闭环。**
-> An iron-rule PDCA workflow skill for AI agents — [OpenClaw](https://openclaw.ai) `SKILL.md` format, also usable with any system that supports Agent Skills.
+> An iron-rule PDCA workflow skill for AI agents — in the open **Agent Skills** (`SKILL.md`) format, compatible with **Claude Code, Codex, Cursor, Gemini CLI, Copilot, OpenClaw** and 30+ other agents.
 
 ---
 
@@ -46,6 +46,26 @@ openclaw skills install git:hanyu880530-lang/pdca-task-workflow --global
 ### 其他框架
 
 `SKILL.md` 是通用 Agent Skill 格式（YAML frontmatter + Markdown），接入你的系统提示或技能系统即可。
+
+## 兼容性 Compatibility
+
+本技能用的是**开放标准 Agent Skills 格式**（`SKILL.md`：只需 `name` + `description` 两个字段 + Markdown 正文，零脚本依赖），被 30+ 主流 agent 原生支持：
+
+| 工具 | 安装位置 |
+|---|---|
+| **OpenClaw** | `~/.openclaw/skills/`（或见上方安装命令） |
+| **Claude Code / Claude** | `.claude/skills/<name>/` 或 `~/.claude/skills/<name>/` |
+| **OpenAI Codex CLI** | `.agents/skills/` 或 `~/.codex/skills/` |
+| **Cursor** (2.4+) | `.cursor/skills/<name>/` 或 `.agents/skills/` |
+| **Gemini CLI / Copilot CLI / Cline / Windsurf 等** | 各自的 skills 目录（均支持 `SKILL.md`） |
+
+通用安装（skills.sh 生态，一条命令装进多种 agent）：
+
+```bash
+npx skills add hanyu880530-lang/pdca-task-workflow
+```
+
+**任何 AI 都能用**：如果某个工具不支持技能目录，把 `SKILL.md` 内容直接贴进它的"自定义指令 / 系统提示词"即可——本质就是一份 Markdown 工作纪律。
 
 ## 适配建议
 

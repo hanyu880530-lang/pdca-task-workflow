@@ -31,7 +31,5 @@ description: "执行任何任务时必用：PDCA 铁律工作流（计划→执�
 - 结尾若有真正的歧义，只问**一个**带选项的问题，不要问一堆开放式问题。
 
 ## 安装 Install
-```bash
-openclaw skills install git:hanyu880530-lang/pdca-task-workflow --global
-```
-或手动把本 `SKILL.md` 放进 `~/.openclaw/skills/pdca-task-workflow/`。
+- **OpenClaw**：`openclaw skills install git:hanyu880530-lang/pdca-task-workflow --global`（或手动放进 `~/.openclaw/skills/pdca-task-workflow/`）
+- **Claude Code / Cursor / Codex 等**：`npx skills add hanyu880530-lang/pdca-task-workflow`，或手动放进对应 `skills/` 目录（见仓库 README 的兼容性对照表）
