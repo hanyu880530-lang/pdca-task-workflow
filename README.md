@@ -1,5 +1,7 @@
 # PDCA Task Workflow · PDCA 铁律工作流
 
+[**English**](README.en.md) | 简体中文
+
 > **让 AI agent 先计划再动手、用真实结果验证、收尾四阶段闭环。**
 > An iron-rule PDCA workflow skill for AI agents — in the open **Agent Skills** (`SKILL.md`) format, compatible with **Claude Code, Codex, Cursor, Gemini CLI, Copilot, OpenClaw** and 30+ other agents.
 
@@ -77,9 +79,10 @@ npx skills add hanyu880530-lang/pdca-task-workflow
 
 ```
 .
-├── SKILL.md    # 技能本体
-├── README.md   # 本文件
-└── LICENSE     # MIT
+├── SKILL.md      # 技能本体
+├── README.md     # 中文说明（本文件）
+├── README.en.md  # English README
+└── LICENSE       # MIT
 ```
 
 ## License
