@@ -79,7 +79,7 @@ npx skills add hanyu880530-lang/pdca-task-workflow
 
 ```
 .
-├── SKILL.md      # 技能本体
+├── SKILL.md      # 技能本体（中英双语）
 ├── README.md     # 中文说明（本文件）
 ├── README.en.md  # English README
 └── LICENSE       # MIT

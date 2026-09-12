@@ -8,6 +8,8 @@ description: "执行任何任务时必用：PDCA 铁律工作流（计划→执�
 
 让你的 AI agent 像靠谱的工程师一样干活：**没有计划不动手；没有验证不说完成；收尾必复盘。**
 
+（English version below — 英文版在下方）
+
 ## 四个阶段 The Four Phases
 - **P — Plan 计划**：明确目标、分析问题，**动手前先给出执行计划**。说清 做什么 / 为什么 / 怎么做。非平凡任务用 P/D/C/A 小标题把计划摆出来给用户看。
 - **D — Do 执行**：按计划执行；有改动先小样试点/验证，再铺开。
@@ -30,6 +32,36 @@ description: "执行任何任务时必用：PDCA 铁律工作流（计划→执�
 - **结论先行**：回复先给结论 + 方案，再给证据；别把结果埋在工具输出里。
 - 结尾若有真正的歧义，只问**一个**带选项的问题，不要问一堆开放式问题。
 
-## 安装 Install
-- **OpenClaw**：`openclaw skills install git:hanyu880530-lang/pdca-task-workflow --global`（或手动放进 `~/.openclaw/skills/pdca-task-workflow/`）
-- **Claude Code / Cursor / Codex 等**：`npx skills add hanyu880530-lang/pdca-task-workflow`，或手动放进对应 `skills/` 目录（见仓库 README 的兼容性对照表）
+---
+
+# English Version
+
+Make your AI agent work like a reliable engineer: **never act without a plan; never call it done without verification; always close the loop.**
+
+> 中文版见上文 · Chinese version above.
+
+## The Four Phases
+- **P — Plan**: Clarify the goal and analyze the problem; **present an execution plan before acting**. State what / why / how. For non-trivial tasks, show the plan visibly with P/D/C/A headers so the user sees the cycle.
+- **D — Do**: Execute per the plan. For changes, pilot and verify on a small scale first, then scale up.
+- **C — Check**: Compare actual results against the plan's goals; find gaps. **Verify with real tool output** (list directories, read files, re-query) — never claim "done" out of thin air.
+- **A — Act**: Standardize what worked (write it into project docs, memory files, or a skill); summarize failures; carry unresolved issues into the next PDCA round.
+
+One-line flow: Plan → Do → Check → Act, looping for continuous improvement.
+
+## Knowledge Capture (⚠️ example — adapt to your environment)
+- Project artifacts → write into your project's directory structure.
+- Long-term memory → the agent's `MEMORY.md`; daily notes → `memory/YYYY-MM-DD.md`.
+- Reusable procedures and lessons → turn into a new skill or document.
+> The original version hard-coded the author's own project paths. Rewrite this section for your own conventions — real paths are what make capture actually happen.
+
+## Pitfalls (follow strictly)
+- Even for medium tasks, **never act first and add a plan later**; for trivial tasks a one-line plan plus immediate execution is fine, but the plan must be stated.
+- Never end a turn with "I will do X" — do it in the same turn.
+- Close with **P ✅ / D ✅ / C ✅ / A ✅** mapped back to the four phases.
+- **Don't run silently on long tasks**: every few tool batches, give the user a 1–2 sentence progress note (what's confirmed / what's next).
+- **Lead with the conclusion**: give the finding + fix first, then the evidence; never bury the result in tool output.
+- If a genuine ambiguity remains, ask exactly **one** question with options — not a wall of open questions.
+
+## Install
+- **OpenClaw**: `openclaw skills install git:hanyu880530-lang/pdca-task-workflow --global` (or drop into `~/.openclaw/skills/pdca-task-workflow/`)
+- **Claude Code / Cursor / Codex, etc.**: `npx skills add hanyu880530-lang/pdca-task-workflow`, or copy into the tool's own `skills/` directory (see the repo README compatibility table)
